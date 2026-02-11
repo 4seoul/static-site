@@ -1,0 +1,26 @@
+import re
+
+from textnode import TextNode, TextType
+
+
+md = """
+This is **bolded** paragraph
+
+This is another paragraph with _italic_ text and `code` here
+This is the same paragraph on a new line
+
+- This is a list
+- with items
+"""
+
+def markdown_to_blocks(markdown):
+	blocks = markdown.split("\n")
+	output = []
+	for block in blocks:
+		x = block.strip()
+		output.append(x)
+
+	
+markdown_to_blocks(md)
+
+
